@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>Alpaca My Bags</title>
+
+	<!-- Bootstrap -->
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+
+<body>
+
+	<!-- Jumbotron On Page -->
+	<div class="jumbotron">
+        <h1 class="text-center">Alpaca My Bags!</h1>
+        <p class="text-center">Your One Stop For All Travel</p>
+    </div>
+
+    <input autocomplete="off" type="text" class="form-control js-destination js-launchModal tt-hint" tabindex="-1" readonly="" spellcheck="false" style="position: absolute; top: 0px; left: 0px; border-color: transparent; box-shadow: none; opacity: 1; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">
+
+	<input autocomplete="off" type="text" id="searchKeywords" class="form-control js-destination js-launchModal tt-input" name="term" tabindex="1" placeholder="Where do you want to go?" spellcheck="false" dir="auto" style="position: relative; vertical-align: top; background-color: transparent;">
+
+    <pre aria-hidden="true" style="position: absolute; visibility: hidden; white-space: pre; font-family: Roboto, Arial, &quot;Helvetica Neue&quot;, Helvetica, sans-serif; font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; word-spacing: 0px; letter-spacing: 0px; text-indent: 0px; text-rendering: auto; text-transform: none;"></pre>
+	<i class="icon-location form-control-icon" aria-hidden="true"></i>
+
+	<label class="sr-only" for="searchKeywords">Where do you want to go?</label>
+
+	<div class="visible-xs searchbox-xs-btn-affordance pull-left">
+                <div class="btn btn-lg btn-primary js-launchModal">
+                    <i aria-hidden="true" class="icon-search"></i>
+                </div>
+    </div>
+
+	<div class="google-map"></div>
+
+	<div class="yelp"></div>
+
+	<div class="weather-days"></div>
+
+ <script type="text/javascript" src="assets/app.js"></script>
+
+</body>
+</html>
