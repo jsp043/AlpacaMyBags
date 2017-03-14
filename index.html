@@ -6,10 +6,18 @@
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
+	<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+
 	<link rel="stylesheet" type="text/css" href="assets/css.css">
 
 	<!-- Bootstrap -->
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+ 	
+ 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBMEJRQwEqSfbWxJTfzqIdlEmIiIvHA3Os&callback=initMap">
+    </script>
+
 </head>
 
 <body>
@@ -20,62 +28,52 @@
         <p class="text-center">Your One Stop For All Travel</p>
     </div>
 
-	<!-- Search Bar -->
-    <input autocomplete="off" type="text" class="form-control js-destination js-launchModal tt-hint" tabindex="-1" readonly="" spellcheck="false" style="position: absolute; top: 0px; left: 0px; border-color: transparent; box-shadow: none; opacity: 1; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">
 
-	<input autocomplete="off" type="text" id="searchKeywords" class="form-control js-destination js-launchModal tt-input" name="term" tabindex="1" placeholder="Where do you want to go?" spellcheck="false" dir="auto" style="position: relative; vertical-align: top; background-color: transparent;">
+	<!-- Search Bar on Page -->
+  <div class="container">
+    <div  class="row">
+      <input id="address" type="text" class="col-md-10" placeholder="Where Should We Go Next?" >
+      <input id="submit" type="button" value="search" class="col-md-2">
+    </div>
 
-    <pre aria-hidden="true" style="position: absolute; visibility: hidden; white-space: pre; font-family: Roboto, Arial, &quot;Helvetica Neue&quot;, Helvetica, sans-serif; font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; word-spacing: 0px; letter-spacing: 0px; text-indent: 0px; text-rendering: auto; text-transform: none;"></pre>
-	<i class="icon-location form-control-icon" aria-hidden="true"></i>
+    <br>
+    <br>
 
+    <div class="row">
+      <label id="cityName"></label>
+      <div id="map" class="col-md-12"></div>
+      <div class="col-md-12"  id="weather">
+          
+      </div>
+
+
+      <!-- <div class = "col-md-12" id ="images"></div> -->
+</div>
+</div>
 	<label class="sr-only" for="searchKeywords">Where do you want to go?</label>
 
-	<div class="visible-xs searchbox-xs-btn-affordance pull-left">
-                <div class="btn btn-lg btn-primary js-launchModal">
-                    <i aria-hidden="true" class="icon-search"></i>
-                </div>
     </div>
 
     <br>
     <br> 
 
 	<!-- Carosole of Cities -->
-<div class="slideshow-container">
-  <div class="mySlides">
-    <div class="numbertext">1 / 3</div>
-    <img src="assets/iceland.jpg" style="width:100%">
-    <div class="text">Caption Text</div>
-  </div>
+<h2>Explore More Places To See!</h2>
+<div class="w3-content w3-display-container">
+  <img class="mySlides" src="assets/iceland.jpg" style="width:100%">
+  <img class="mySlides" src="assets/paris.jpg" style="width:100%">
+  <img class="mySlides" src="assets/mountrush.jpg" style="width:100%">
 
-  <div class="mySlides">
-    <div class="numbertext">2 / 3</div>
-    <img src="assets/paris.jpg" style="width:100%">
-    <div class="text">Caption Two</div>
-  </div>
 
-  <div class="mySlides">
-    <div class="numbertext">3 / 3</div>
-    <img src="assets/mountrush.jpg" style="width:100%">
-    <div class="text">Caption Three</div>
-  </div>
-
-  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+ <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-display-right" onclick="plusDivs(1)">&#10095;</button>
 </div>
+
 <br>
 
-<div style="text-align:center">
-  <span class="dot" onclick="currentSlide(1)"></span> 
-  <span class="dot" onclick="currentSlide(2)"></span> 
-  <span class="dot" onclick="currentSlide(3)"></span> 
-</div>
-
-	<!-- Google Places That Pops Up -->
-	<div class="google-places"></div>
-
-	<div class="maps"></div>
-
-	<div class="weather-days"></div>
+<!-- Google Places That Pops Up -->
+<div class="google-places"></div>
+	
 
  <script type="text/javascript" src="assets/js/alpaca.js"></script>
 
