@@ -6,9 +6,19 @@
 	background-size: cover;
 }
 
+#row2 {
+	height:700px;
+}
+
 #map {
-        height: 235px;
+        height: 555px;
       }
+
+#weather {
+	max-height: 550px;
+    color: royalblue;
+    float: right;
+}
 
 .text-center {
 	color: white;
