@@ -89,7 +89,7 @@ function showDivs(n) {
 
         // Log the resulting object
         //console.log(response);
-
+        debugger;
         // Transfer content to HTML
         $("#weather").append("<h1>" + "<strong>" + response.name + " Weather Details</h1></strong>");
         $("#weather").append("Wind Speed: " + response.wind.speed + "<br>");
@@ -117,8 +117,8 @@ function showDivs(n) {
         //console.log(response);
 
         for (i = 0; i < 5; i++) {
-
-           $("#weather").append("<h1>" + response.list[i].main.temp + " Fahrenheit </h1> <span>"+ response.list[i].weather[0].description+"</span> <br>");   
+          var iamgestr ="<img alt="+response.list[i].weather[0].description+" src=\"http://openweathermap.org/img/w/"+response.list[i].weather[0].icon+".png\">";
+           $("#weather").append("<div class=\"row\"><h1>" + response.list[i].main.temp + " Fahrenheit </h1>"+iamgestr+" <span>"+ response.list[i].weather[0].description+"</span></div> <br>");   
           
                }
        
