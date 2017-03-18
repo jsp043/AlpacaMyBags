@@ -2,79 +2,95 @@
 
 <html>
 <head>
-	<title>Alpaca My Bags</title>
+  <title>Alpaca My Bags</title>
 
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
 
-	<link rel="stylesheet" type="text/css" href="assets/css.css">
+  <link rel="stylesheet" type="text/css" href="assets/css.css">
 
-	<!-- Bootstrap -->
-	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
- 	
- 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <!-- Bootstrap -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 
- 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBMEJRQwEqSfbWxJTfzqIdlEmIiIvHA3Os&callback=initMap"></script>
-
-  <!-- LINK TO FIREBASE GOES HERE -->
   <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBMEJRQwEqSfbWxJTfzqIdlEmIiIvHA3Os&callback=initMap">
+
+  </script>
 
 </head>
 
 <body>
-
-	<!-- Jumbotron On Page -->
-	<div class="jumbotron">
+  <!-- Jumbotron On Page -->
+  <div class="jumbotron">
         <h1 class="text-center">Alpaca My Bags!</h1>
         <p class="text-center">Your One Stop For All Travel</p>
-    </div>
+  </div>
 
 
-	<!-- Search Bar on Page -->
+  <!-- Search Bar on Page -->
   <div class="container">
-    <div  class="row">
-      <center><input id="address" type="text" class="col-md-5" placeholder="Where Should We Go Next?" style="width: 600px">
-      <input id="submit" type="button" value="search" class="col-md-2"></center>
-    </div>
 
-    <br>
-    <br>
+      <div class="row">
 
-  <div class="row" id="row2">
-     <label id="cityName"></label>
-     <div id="map" class="col-md-6"></div>
-     <div class="col-md-5" id="weather" style="overflow: scroll">
-          
-   </div>
+        <input id="address" type="text" class="col-md-10" placeholder="Where Should We Go Next?">
+        <input id="submit" type="button" value="search" class="col-md-2">
 
-</div>
-</div>
-	<label class="sr-only" for="searchKeywords">Where do you want to go?</label>
+      </div>
 
-    </div>
+      <br>
+      <br>
 
-<!-- Link to Second Page -->
-<center><strong><a href="index2.html">Book Your Trip Here!</a></center></strong>
-    <br>
+      <div class="row" id="row2">
 
-	<!-- Carosole of Cities -->
-<h3><center>Explore More Places To See!</h3></center>
-<div class="w3-content w3-display-container">
-  <img class="mySlides" src="assets/iceland.jpg" style="width:100%">
-  <img class="mySlides" src="assets/paris.jpg" style="width:100%">
-  <img class="mySlides" src="assets/mountrush.jpg" style="width:100%">
+        <label id="cityName"></label>
+        <div id="map" class="col-md-5" style="float: left"></div>
+        <div id="weather" class="col-md-5" style="float: right; overflow: scroll;"></div>
+
+      <br>
+
+                <ol></ol>
+
+              </div>
+          </div>
+        </div>
+            
+      </div>
+
+          <div class="panel panel-primary" id="panel-restaurants">
+              <div class="panel-heading">
+                <h3 class="panel-title">Restaurants</h3>
+              </div>
+              <div class="panel-body" id="restaurantsResults">
+
+              </div>
+          </div>
+  
+       <!-- Carousel of Cities -->
+      
+      <div class="w3-content w3-display-container">
+
+          <h2>Explore More Places To See!</h2>
+          <img class="mySlides" src="assets/iceland.jpg" style="width:100%">
+          <img class="mySlides" src="assets/paris.jpg" style="width:100%">
+          <img class="mySlides" src="assets/mountrush.jpg" style="width:100%">
 
 
- <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-  <button class="w3-button w3-display-right" onclick="plusDivs(1)">&#10095;</button>
-</div>
+          <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+          <button class="w3-button w3-display-right" onclick="plusDivs(1)">&#10095;</button>
 
-<br>
+      </div>
 
- <script type="text/javascript" src="assets/js/alpaca.js"></script>
+      <br>
+
+
+  </div>
+
+<script type="text/javascript" src="assets/js/logic.js"></script>
+<script type="text/javascript" src="assets/js/alpaca.js"></script>
 
 </body>
 </html>

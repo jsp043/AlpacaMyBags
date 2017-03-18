@@ -368,3 +368,5 @@ $(document).ready(function () {
     //initializing controller & view
     aplaca.init();
 });
+
+/*=====================================================================================*/
